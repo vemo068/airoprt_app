@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:airoprt_app/styles/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -74,7 +70,7 @@ class NewsAndUpdates extends StatelessWidget {
                             Icon(
                               Icons.coronavirus_rounded,
                               color: kcyellow,
-                              size: 50,
+                              size: 40,
                             ),
                           ],
                         ),
@@ -114,7 +110,7 @@ class NewsAndUpdates extends StatelessWidget {
                             Icon(
                               Icons.accessible,
                               color: kcAccent,
-                              size: 50,
+                              size: 40,
                             ),
                           ],
                         ),

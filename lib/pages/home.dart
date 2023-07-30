@@ -1,5 +1,6 @@
 import 'package:airoprt_app/components/appbar.dart';
 import 'package:airoprt_app/components/flight_info_home.dart';
+import 'package:airoprt_app/components/navbar.dart';
 import 'package:airoprt_app/components/news_and_updates.dart';
 import 'package:airoprt_app/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(left: 30),
+        child: CustomNavBar(),
+      ),
+      //bottomNavigationBar: CustomNavBar(),
       backgroundColor: kcmain,
       body: ListView(children: const [
         CustomAppBar(),
@@ -25,7 +31,10 @@ class HomePage extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        NewsAndUpdates()
+        NewsAndUpdates(),
+        SizedBox(
+          height: 100,
+        ),
       ]),
     );
   }

@@ -15,11 +15,18 @@ class PagesController extends GetxController {
   void changePage(int index) {
     if (currentIndex < index) {
       currentIndex = index;
-      Get.off(() => pages[index], transition: Transition.rightToLeft);
+      Get.off(pages[index], transition: Transition.rightToLeft);
     } else {
       currentIndex = index;
 
-      Get.off(() => pages[index], transition: Transition.leftToRight);
+      Get.off(pages[index], transition: Transition.leftToRight);
     }
+  }
+
+  int currentFlightTab = 0;
+  final List<int> flightTabs = [0, 1];
+  void changeFlightTab(int index) {
+    currentFlightTab = index;
+    update();
   }
 }

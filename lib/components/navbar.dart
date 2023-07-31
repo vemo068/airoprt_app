@@ -30,7 +30,7 @@ class CustomNavBar extends StatelessWidget {
 
               /// Likes
               DotNavigationBarItem(
-                icon: const Icon(Icons.favorite_border),
+                icon: const Icon(Icons.flight),
               ),
               DotNavigationBarItem(
                 icon: const Icon(Icons.person),

@@ -23,24 +23,37 @@ class FlightsPage extends StatelessWidget {
           const Search(),
           Expanded(
               child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ListView.builder(
               itemCount: departures.length,
               itemBuilder: (BuildContext context, int index) {
                 Departure departure = departures[index];
-                return ListTile(
-                  title: Text(departure.destination),
-                  subtitle: Text(departure.time),
-                  trailing: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: departure.bgcolor,
-                      borderRadius: BorderRadius.circular(8),
+                return Column(
+                  children: [
+                    ListTile(
+                      tileColor: kcsecondary,
+                      title: Text(
+                        departure.destination,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, color: kcAccent),
+                      ),
+                      subtitle: Text(departure.time),
+                      trailing: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: departure.bgcolor,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Text(
+                          departure.statu,
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      departure.statu,
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                  ),
+                    const SizedBox(
+                      height: 10,
+                    )
+                  ],
                 );
               },
             ),
